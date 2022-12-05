@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 0-print_list_integer.py
-# Ifeanyi kalu
 
 
 def print_list_integer(my_list=[]):
