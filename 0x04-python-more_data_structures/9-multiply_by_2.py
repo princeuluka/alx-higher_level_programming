@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 9-multiple_by_2.py
-# ifeanyi klau
 
 
 def multiply_by_2(a_dictionary):
