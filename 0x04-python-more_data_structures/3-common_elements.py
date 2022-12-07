@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 3-common_elements.py
-# ifeanyi kalu
 
 
 def common_elements(set_1, set_2):
