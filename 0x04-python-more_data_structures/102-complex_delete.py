@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 102-complex_delete.py
-# ifeanyi kalu
 
 
 def complex_delete(a_dictionary, value):
