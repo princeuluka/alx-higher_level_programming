@@ -1,7 +1,3 @@
-/*
- * File: 103-python.c
- * Auth: ifeanyi kalu
- */
 
 #include <Python.h>
 
