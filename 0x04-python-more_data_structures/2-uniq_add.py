@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 2-uniq_add.py
-# ifeanyi kalu
 
 
 def uniq_add(my_list=[]):
