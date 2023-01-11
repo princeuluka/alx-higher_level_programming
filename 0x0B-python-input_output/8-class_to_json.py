@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-# 8-load_from_json_file.py
-# ifeanyi kalu
-"""Defines a JSON file-reading function."""
-import json
+"""returns dictionary description with sample data structure"""
 
 
-def load_from_json_file(filename):
-    """Create a Python object from a JSON file."""
-    with open(filename) as f:
-        return json.load(f)
+def class_to_json(obj):
+    """returns dictionary decription with sample data structure"""
+    return obj.__dict__

@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-# 6-from_json_string.py
-# ifeanyi kalu
-"""Defines a JSON-to-object function."""
+"""creates an object from a json file"""
 import json
 
 
-def from_json_string(my_str):
-    """Return the Python object representation of a JSON string."""
-    return json.loads(my_str)
+def load_from_json_file(filename):
+    """creates an Object from a json file"""
+    with open(filename, "r") as f:
+        return json.load(f)
