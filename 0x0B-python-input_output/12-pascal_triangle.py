@@ -1,34 +1,21 @@
 #!/usr/bin/python3
-# 12-student.py
-# ifeanyi kalu
-"""Defines a class Student."""
+"""Pascal's triangle
+"""
 
 
-class Student:
-    """Represent a student."""
-
-    def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
-
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
-        """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-
-    def to_json(self, attrs=None):
-        """Get a dictionary representation of the Student.
-
-        If attrs is a list of strings, represents only those attributes
-        included in the list.
-
-        Args:
-            attrs (list): (Optional) The attributes to represent.
-        """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
+def pascal_triangle(n):
+    """returns a list of intergers representing the
+    pascal's triangle of n"""
+    if n <= 0:
+        return []
+    a = [[] for i in range(n)]
+    for i in range(n):
+        for j in range(i + 1):
+            if j < i:
+                if j == 0:
+                    a[i].append(1)
+                else:
+                    a[i].append(a[i - 1][j] + a[i - 1][j - 1])
+            elif j == i:
+                a[i].append(1)
+    return a

@@ -1,24 +1,23 @@
 #!/usr/bin/python3
-# 11-student.py
-# ifeanyi kalu
-"""Defines a class Student."""
+"""Student class defines a student"""
 
 
 class Student:
-    """Represent a student."""
-
+    """defines a student"""
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
-
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
-        """
+        """instantiation"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
-        """Get a dictionary representation of the Student."""
+    def to_json(self, attrs=None):
+        """retrieves a dictionary representation of
+        Student instance"""
+        if type(attrs) == list and all(type(elem) == str for elem in attrs):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+
+    def reload_from_json(self, json):
+        """replaces all attributes of the student instance"""
+        for key, value in json.items():
+            setattr(self, key, value)
